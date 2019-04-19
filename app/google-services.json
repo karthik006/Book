@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "245198961582",
+    "firebase_url": "https://book-3f6ff.firebaseio.com",
+    "project_id": "book-3f6ff",
+    "storage_bucket": "book-3f6ff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:245198961582:android:958c971f3e39a401",
+        "android_client_info": {
+          "package_name": "com.tgt.karthik.book"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "245198961582-4hj4ns8t39b5hr1na6lgjvui748d7mjn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tgt.karthik.book",
+            "certificate_hash": "3fb48a2a9e964b49ef7f43a75a3724d0bbd155df"
+          }
+        },
+        {
+          "client_id": "245198961582-kku70g20v6is5kptdai3s37155shec38.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCogR_Yeqg5gXlXKYMCXusU6GvA0Hxh2no"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "245198961582-kku70g20v6is5kptdai3s37155shec38.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

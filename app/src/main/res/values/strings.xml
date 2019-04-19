@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Book</string>
+    <string name="logo">Logo</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="no_account_yet_create_one">No account yet? Create one</string>
+    <string name="book">book</string>
+    <string name="name_of_book">Name of book</string>
+    <string name="year">2016</string>
+</resources>
