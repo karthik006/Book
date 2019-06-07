@@ -8,4 +8,8 @@
     <string name="book">book</string>
     <string name="name_of_book">Name of book</string>
     <string name="year">2016</string>
+    <string name="enter_book_to_search">Enter book to search</string>
+    <string name="searc">Search</string>
+    <string name="textview">TextView</string>
+    <string name="no_summary_available">No summary available</string>
 </resources>

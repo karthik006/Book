@@ -1,10 +1,10 @@
 package com.tgt.karthik.book;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,10 +18,10 @@ import java.util.List;
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder> {
 
     private final LayoutInflater mInflater;
-    private List<Books> contactListFiltered;
-    List<Books> data;
+    private List<Book> contactListFiltered;
+    List<Book> data;
 
-    public ListAdapter(Context context, List<Books> data) {
+    public ListAdapter(Context context, List<Book> data) {
         mInflater = LayoutInflater.from(context);
         this.contactListFiltered = data;
         this.data = data;
@@ -35,11 +35,22 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ListAdapter.ListViewHolder listViewHolder, int i) {
-        Books currentBook = contactListFiltered.get(i);
-        listViewHolder.book_name.setText(currentBook.getOriginal_title());
-        listViewHolder.book_year.setText(String.valueOf(currentBook.getPub_year()));
-        Picasso.with(listViewHolder.book_image.getContext()).load(currentBook.getImage_url()).placeholder(R.drawable.googleg_disabled_color_18).into(listViewHolder.book_image);
+    public void onBindViewHolder(@NonNull final ListAdapter.ListViewHolder listViewHolder, int i) {
+        final Book currentBook = contactListFiltered.get(i);
+        Log.d("OnBind", "data is " + currentBook.getTitle());
+        listViewHolder.book_name.setText(currentBook.getTitle());
+        listViewHolder.book_year.setText(String.valueOf(currentBook.getAuthor()));
+        Picasso.with(listViewHolder.book_image.getContext()).load(currentBook.getCoverUrl()).placeholder(R.drawable.placeholder).into(listViewHolder.book_image);
+
+        listViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), BookDetails.class);
+                intent.putExtra("book", currentBook);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                view.getContext().startActivity(intent);
+            }
+        });
     }
 
     @Override
